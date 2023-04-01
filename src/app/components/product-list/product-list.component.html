@@ -1,0 +1,28 @@
+<ng-container *ngIf="products$ | async as products">
+    <app-list-search class="list-search"
+        [productCategories]="getProductCategories(products)"
+        [productMinAndMaxPrices]="getMinAndMaxPrices(products)"
+        
+        (productCategoryFilter)="updateProductCategoryFilter($event)"
+        (productNameSearch)="updateProductNameSearch($event)"
+        (productMinPriceFilter)="updateProductMinPriceFilter($event)"
+        (productMaxPriceFilter)="updateProductMaxPriceFilter($event)">
+    </app-list-search>
+
+    <div class='products-container'>
+        <div class="card" style="width: 18rem;"
+            *ngFor="let product of products 
+                | productSearch: productNameSearch 
+                | categoryFilter: productCategoryFilter 
+                | priceFilter: productMinPrice : productMaxPrice">
+            <div class="card-body">
+                <p class="card-text">{{ product.category }}</p>
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description }}.</p>
+            </div>
+            <div class="card-body product-price-container">
+                <p class="card-text">Available now for only: {{ product.price }} RON</p>
+            </div>
+        </div>
+    </div>
+</ng-container>

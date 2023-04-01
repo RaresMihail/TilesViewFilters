@@ -1,0 +1,18 @@
+.list-search-container {
+    display: flex;
+    width: 100%;
+    padding: 15px 6% 15px 6%;
+
+    .products-search {
+        width: 18rem;
+        margin-top: 15px;
+    }
+
+    .category-dropdown {
+        margin: 10px 40px 0px 40px;
+    }
+    
+    .price-slider {
+        width: 400px;
+    }
+}

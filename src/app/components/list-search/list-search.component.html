@@ -1,0 +1,22 @@
+<div class="list-search-container bg-light">
+    <form>
+        <input class="products-search" type="search" placeholder="Search" name="Products Search"
+            [(ngModel)]="productName" (ngModelChange)="productsSearch($event)">
+    </form>
+
+    <div class="category-dropdown" ngbDropdown>
+        <button type="button" class="btn btn-outline-secondary" id="categoryDropdown" ngbDropdownToggle>{{ selectedProductCategory }}</button>
+        <div ngbDropdownMenu aria-labelledby="categoryDropdown">
+            <button ngbDropdownItem
+                *ngFor="let productCategory of productCategories" (click)="categoryFilter(productCategory)">{{ productCategory }}</button>
+        </div>
+    </div>
+    
+    <ngx-slider class="price-slider"
+        (valueChange)="minPriceFilter($event)"
+        (highValueChange)="maxPriceFilter($event)"
+        [(value)]="productMinAndMaxPrices[0]"
+        [(highValue)]="productMinAndMaxPrices[1]"
+        [options]="options">
+    </ngx-slider>
+</div>

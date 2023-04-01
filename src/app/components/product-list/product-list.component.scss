@@ -1,0 +1,17 @@
+.list-search {
+    display: flex;
+    justify-content: center;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5.5%;
+    .card {
+        margin: 15px 10px 15px 10px;
+    }
+    .product-price-container {
+        display: flex;
+        justify-content: center;
+    }
+}
