@@ -1,10 +1,12 @@
 # TilesViewFilters
 
-This is a very simple SPA consisting of:
+This is a showcase Angular project consisting of:
   - product tiles view;
   - search bar;
   - category filter;
   - price filter slider.
+  
+ Yes, all the filters work and the everything is functional.
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
