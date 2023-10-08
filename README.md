@@ -6,8 +6,7 @@ This is a showcase Angular project consisting of:
   - category filter;
   - price filter slider.
   
- Yes, all the filters work and the everything is functional.
-
+ All the filters work and everything is functional.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
